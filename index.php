@@ -1,0 +1,21 @@
+<?php
+
+// Autoloader načte třídy
+function nactiTridu($trida) : void
+{
+    require("tridy/$trida.php");
+}
+spl_autoload_register("nactiTridu");
+
+
+/*
+ * Připojí se na konkrétní databázy
+ */
+Databaze::pripoj('localhost', 'root', '', 'db_???????????????');
+
+
+/*
+ * vytvoří třídu
+ */
+$spravceClanku = new SpravceClanku();
+
